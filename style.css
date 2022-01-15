@@ -1,5 +1,10 @@
 :root {
     --color-black: #141D26;
+    --color-transparent: rgba(255,255,255,0.5);
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -12,16 +17,23 @@ a {
 }
 
 header {
-    /* overflow: hidden; */
     position: fixed;
     top: 0;
     width: 100vw;
+    /* background-color: var(--color-transparent); */
+    background-color: pink;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
 }
 
 #welcome-section {
     height: 100vh;
-    background-color: var(--color-black);
+    /* background-image: url('assets/images/Seoul - 21985.gif'); */
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%), url('assets/images/shanghai-5852019.jpg');
+    background-size: cover;
     color: white;
+    font-weight: bold;
 }
 
 @media (min-width: 480px) {
