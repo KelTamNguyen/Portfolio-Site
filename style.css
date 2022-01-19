@@ -1,14 +1,16 @@
 :root {
     --color-black: #141D26;
-    --color-transparent: rgba(255,255,255,0.5);
     --text-transparent: rgba(255, 255, 255, 0.8);
-    --main-orange: rgba(238,175,97, 0.8);
-    --main-cream: #FDFDD2;
+    --main-orange: rgb(238,175,97);
+    --main-cream: rgb(253, 253, 210);
+    --main-blond: rgb(255, 245, 189);
     --main-dark-orange: #FFB448;
 }
 
 * {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body {
@@ -18,10 +20,6 @@ body {
 
 a {
     text-decoration: none;
-}
-
-a:visited {
-    color: inherit;
 }
 
 nav {
@@ -38,10 +36,13 @@ nav {
     margin-right: 2rem;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
     padding: 1.5vh 0;
-
 }
 
 nav a {
+    color: var(--main-cream);
+}
+
+nav a:visited {
     color: var(--main-cream);
 }
 
@@ -67,17 +68,26 @@ nav a {
 }
 
 #welcome-section h1 {
-    font-size: 2em;
+    font-size: 64px;
 }
 
 #welcome-section p {
     font-style: italic;
     font-weight: lighter;
+    font-size: 1.5em;
+}
+
+#skills {
+}
+
+#skills h1 {
+    color: var(--main-dark-orange);
 }
 
 #projects {
     color: var(--main-dark-orange);
     display: grid;
+    background: var(--main-cream);
 }
 
 .project-img {
@@ -95,4 +105,18 @@ nav a {
 #contact {
     background: var(--main-orange);
     color: var(--main-cream);
+    text-align: center;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 2.5vw
+}
+
+@media (max-width: 768px) {
+    .contact-links {
+        flex-direction: column;
+        gap: 0;
+    }
 }
