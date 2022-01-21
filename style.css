@@ -1,16 +1,22 @@
 :root {
     --color-black: #141D26;
     --text-transparent: rgba(255, 255, 255, 0.8);
-    --main-orange: rgb(238,175,97);
+    --main-pastel-orange: rgb(255, 180, 72);
+    --main-navajo-white: rgb(255, 221, 170);
     --main-cream: rgb(253, 253, 210);
     --main-blond: rgb(255, 245, 189);
-    --main-dark-orange: #FFB448;
+    --main-caramel: rgb(255, 220, 151);
+    --main-topaz: rgb(255, 199, 132);
 }
 
 * {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -30,7 +36,7 @@ nav {
     justify-content: flex-end;
     gap: 16px;
     font-size: 2em;
-    background: var(--main-orange);
+    background: var(--main-pastel-orange);
     width: 100%;
     z-index: 10;
     margin-right: 2rem;
@@ -81,17 +87,24 @@ nav a:visited {
 }
 
 #skills h1 {
-    color: var(--main-dark-orange);
+    color: var(--main-pastel-orange);
 }
 
 #projects {
-    color: var(--main-dark-orange);
+    color: var(--main-pastel-orange);
     display: grid;
     background: var(--main-cream);
 }
 
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-row-gap: 5px;
+}
+
 .project-img {
     width: 300px;
+    height: 150px;
 }
 
 #profile-link {
@@ -103,7 +116,7 @@ nav a:visited {
 }
 
 #contact {
-    background: var(--main-orange);
+    background: var(--main-pastel-orange);
     color: var(--main-cream);
     text-align: center;
 }
