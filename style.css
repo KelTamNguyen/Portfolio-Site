@@ -13,6 +13,7 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -33,15 +34,30 @@ nav {
     top: 0;
     left: 0;
     display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    font-size: 2em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
     background: var(--main-pastel-orange);
     width: 100%;
     z-index: 10;
     margin-right: 2rem;
     box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);
-    padding: 1.5vh 0;
+    padding: 1.5vh 2rem;
+}
+
+.logo {
+    font-family: 'Dancing Script', cursive;
+    color: var(--main-cream);
+    font-size: 4vh;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 0;
+    font-size: 3vh;
 }
 
 nav a {
@@ -52,11 +68,32 @@ nav a:visited {
     color: var(--main-cream);
 }
 
-@media (max-width: 768px) {
-    nav {
-        font-size: 1.5em;
-        justify-content: space-evenly;
-        gap: 0;
+.hamburger {
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    display: none;
+}
+
+.hamburger:focus {
+    outline: none;
+}
+
+@media (max-width:768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
     }
 }
 
@@ -83,7 +120,19 @@ nav a:visited {
     font-size: 1.5em;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 2rem;
+}
+
 #skills {
+    padding: 5rem;
+}
+
+#skills ul {
+    display: flex;
+    list-style: none;
 }
 
 #skills h1 {
@@ -94,17 +143,23 @@ nav a:visited {
     color: var(--main-pastel-orange);
     display: grid;
     background: var(--main-cream);
+    padding: 5rem;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     grid-row-gap: 5px;
 }
 
+.project-tile {
+    text-align: center;
+    background-color: var(--main-pastel-orange);
+}
+
 .project-img {
-    width: 300px;
-    height: 150px;
+    aspect-ratio: 1.5 / 1;
+    width: 100%;
 }
 
 #profile-link {
